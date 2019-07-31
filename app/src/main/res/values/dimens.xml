@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_half">8dp</dimen>
+    <dimen name="margin">16dp</dimen>
+    <dimen name="coin_img_size">32dp</dimen>
+    <dimen name="coin_img_big_size">64dp</dimen>
+</resources>

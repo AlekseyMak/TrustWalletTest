@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/main_nav" app:startDestination="@id/mainFragment">
+
+
+    <fragment android:id="@+id/mainFragment" android:name="com.alma.trustwallettest.presentation.main.MainFragment"
+              tools:layout="@layout/fragment_main"
+              android:label="MainFragment">
+        <action android:id="@+id/action_mainFragment_to_tokenSearchFragment" app:destination="@id/tokenSearchFragment"/>
+    </fragment>
+    <fragment android:id="@+id/tokenSearchFragment"
+              android:name="com.alma.trustwallettest.presentation.search.CoinSearchFragment"
+              tools:layout="@layout/fragment_coin_search"
+              android:label="TokenSearchFragment">
+        <argument android:name="checked_coin" app:argType="integer"/>
+        <argument android:name="coin_direction" app:argType="com.alma.trustwallettest.presentation.search.CoinDirection"
+                  android:defaultValue="EXCHANGE_FROM"/>
+    </fragment>
+</navigation>

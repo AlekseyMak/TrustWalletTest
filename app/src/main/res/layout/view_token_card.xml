@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/margin"
+        android:padding="@dimen/margin"
+        android:animateLayoutChanges="true"
+        android:layout_height="wrap_content">
+
+    <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/top_caption"
+            android:text="@string/you_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+    />
+
+    <EditText
+            android:layout_marginTop="@dimen/margin"
+            app:layout_constraintTop_toBottomOf="@id/top_caption"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/coin_img"
+            android:gravity="start"
+            android:id="@+id/amount"
+            android:textSize="24sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:hint="0"
+            android:inputType="numberDecimal"
+            android:background="@null"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:layout_marginTop="@dimen/margin"
+            app:layout_constraintTop_toBottomOf="@id/amount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/margin"
+            android:id="@+id/funds"
+            tools:text="0.0000 BTC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+    />
+
+    <ImageView
+            android:id="@+id/chevron"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:src="@drawable/ic_chevron"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+    <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/chevron"
+            android:layout_marginEnd="@dimen/margin"
+            tools:text="BTC"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/coin_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+    <ImageView
+            android:id="@+id/coin_img"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:src="@drawable/ic_coin1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/coin_name"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_width="@dimen/coin_img_size"
+            android:layout_height="@dimen/coin_img_size"/>
+
+
+</merge>

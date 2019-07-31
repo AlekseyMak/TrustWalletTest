@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">TrustWalletTest</string>
+    <string name="you_pay">You pay</string>
+    <string name="you_receive">You receive</string>
+    <string name="exchange">EXCHANGE</string>
+</resources>
